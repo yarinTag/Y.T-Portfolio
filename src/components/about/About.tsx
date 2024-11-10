@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Timeline, TimelineItem } from '../TimelineItem';
 import Tab from '../tab/Tab';
+import Skill from '../Skill';
 
 const experienceData = [
   {
@@ -32,11 +33,38 @@ const experienceData = [
   },
 ];
 
+const skillsData = [
+  {
+    title: 'Languages',
+    skills: ['TypeScript', 'JavaScript', 'Java'],
+  },
+  {
+    title: 'Web Development',
+    skills: [
+      'React.js',
+      'Node.js',
+      'NestJS',
+      'Express.js',
+      'HTML',
+      'Redux Toolkit',
+      'RTK Query',
+    ],
+  },
+  {
+    title: 'Databases',
+    skills: ['MongoDB', 'SQL (MSSQL)', 'Redis', 'PostgreSQL'],
+  },
+  {
+    title: 'Testing & Development Tools',
+    skills: ['Storybook', 'Cypress', 'Azure', 'Git & Bitbucket', 'Jira'],
+  },
+];
+
 const tabs = [
   {
     label: 'Experience',
     content: (
-      <div className='col-span-full mt-12'>
+      <div className='col-span-full mt-4'>
         {/* <h3 className='text-2xl font-bold text-white mb-4'>Experience</h3> */}
         <Timeline>
           {experienceData.map((experience) => (
@@ -58,7 +86,7 @@ const tabs = [
   {
     label: 'Education',
     content: (
-      <div className='col-span-full mt-12'>
+      <div className='col-span-full mt-4'>
         <Timeline>
           <TimelineItem
             key={'The College Of Management Academic Studies'}
@@ -77,65 +105,16 @@ const tabs = [
   {
     label: 'Skills',
     content: (
-      <div className='skills-container'>
-        <h2 className='text-2xl font-bold mb-4'>Skills</h2>
-        <div className='skill-box'>
-          <h3 className='text-xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-t-lg'>
-            Languages
-          </h3>
-          <ul>
-            <li>TypeScript</li>
-            <li>JavaScript</li>
-            <li>Java</li>
-          </ul>
-        </div>
-        <div className='skill-box'>
-          <h3 className='text-xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-t-lg'>
-            Web Development
-          </h3>
-          <ul>
-            <li>React.js</li>
-            <li>Node.js</li>
-            <li>NestJS</li>
-            <li>Express.js</li>
-            <li>HTML</li>
-          </ul>
-        </div>
-        <div className='skill-box'>
-          <h3 className='text-xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-t-lg'>
-            Databases
-          </h3>
-          <ul>
-            <li>MongoDB</li>
-            <li>SQL (MSSQL)</li>
-            <li>Redis</li>
-            <li>PostgreSQL</li>
-          </ul>
-        </div>
-        <div className='skill-box'>
-          <h3 className='text-xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-t-lg'>
-            Testing & Development Tools
-          </h3>
-          <ul>
-            <li>Storybook</li>
-            <li>Cypress</li>
-            <li>Azure</li>
-            <li>Git & Bitbucket</li>
-            <li>Jira</li>
-          </ul>
-        </div>
+      <div className='col-span-full mt-4'>
+        {skillsData.map((skillGroup, index) => (
+          <Skill key={index} {...skillGroup} />
+        ))}
       </div>
     ),
   },
 ];
 
 const AboutSection = () => {
-  const skillsData = [
-    { title: 'Material-UI', icon: '//path/to/materialui-icon.svg' },
-    { title: 'GitHub', icon: '//path/to/github-icon.svg' },
-    // Add more skills objects here
-  ];
-
   return (
     <section className='container my-24 mx-auto px-12 py-4' id='about'>
       <div className='md:order-2'></div>
