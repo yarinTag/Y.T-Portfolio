@@ -2,8 +2,11 @@
 import React from 'react';
 import Link from 'next/link';
 
-import NavLink, { INProps } from './NavLink';
 import MobileMenu from './MobileMenu';
+import NavLink, { INProps } from './NavLink';
+import { ThemeContext } from '@/app/context';
+import LightBulbOn from '@/app/icons/LightBulbOn';
+import LightBulbOff from '@/app/icons/LightBulbOff';
 
 const navLinks: INProps[] = [
   {
@@ -24,8 +27,11 @@ const navLinks: INProps[] = [
   },
 ];
 
+const useTheme = () => React.useContext(ThemeContext);
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
@@ -40,6 +46,14 @@ const Navbar = () => {
         >
           Y.T
         </Link>
+        <div className='toggle-theme'>
+          <button
+            className='flex items-center px-3 py-2 text-slate-200 hover:text-white hover:border-white'
+            onClick={() => toggleTheme(theme === 'black' ? false : true)}
+          >
+            {theme === 'black' ? <LightBulbOff /> : <LightBulbOn />}
+          </button>
+        </div>
         <div className='mobile-menu block md:hidden'>
           {isOpen ? (
             <button

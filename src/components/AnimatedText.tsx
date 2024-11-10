@@ -40,7 +40,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text, delay }) => {
     <p
       style={{
         animation: 'typewrite 2s steps(30, end)',
-        color: 'white',
+        // color: 'white',
         fontStyle: 'italic',
         fontWeight: 'bold',
       }}

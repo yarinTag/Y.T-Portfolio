@@ -119,8 +119,8 @@ const AboutSection = () => {
     <section className='container my-24 mx-auto px-12 py-4' id='about'>
       <div className='md:order-2'></div>
       <div className='md:order-1 flex flex-col justify-center'>
-        <h2 className='text-3xl font-bold text-white mb-4'>About Me</h2>
-        <p className='text-lg text-gray-300 mb-6'>
+        <h2 className='text-3xl font-bold mb-4'>About Me</h2>
+        <p className='text-lg mb-6'>
           After completing around 9 months of reserve duty, I'm now seeking my
           next opportunity. With around 3 years of hands-on experience in React,
           Node.js, and cloud technologies, I’m eager to bring my technical

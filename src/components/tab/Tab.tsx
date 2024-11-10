@@ -21,8 +21,8 @@ const Tab = ({ tabs }: TabProps) => {
             key={index}
             className={`px-4 py-2 border-y-4 rounded-xl shadow-lg shadow-blue-500/50${
               index === activeTab
-                ? ' underline bg-blue-500 text-white'
-                : 'bg-gray-200 text-gray-400 hover:bg-gray-300'
+                ? ' underline'
+                : 'bg-gray-200 hover:bg-gray-400'
             }`}
             onClick={() => handleTabClick(index)}
           >
