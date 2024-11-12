@@ -12,7 +12,7 @@ export const ThemeContext = React.createContext<IContextProps>({
 });
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = React.useState<'white' | 'black'>('black');
+  const [theme, setTheme] = React.useState<'white' | 'black'>('white');
 
   const toggleTheme = (value: boolean) => {
     setTheme(value ? 'black' : 'white');

@@ -5,6 +5,7 @@ import { ThemeProvider } from './context';
 import AboutSection from '@/components/about/About';
 import Navbar from '@/components/navbar/Navbar';
 import Section from '@/components/Section';
+import Project from '@/components/Project';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <Section />
         </div>
         <AboutSection />
+        <Project />
       </main>
     </ThemeProvider>
   );

@@ -2,6 +2,8 @@ import Image from 'next/image';
 import AnimatedText from './AnimatedText';
 
 const Section = () => {
+  const CV = '/images/YT-Resume.pdf';
+
   return (
     <section>
       <div className='grid grid-cols-1 sm:grid-cols-12'>
@@ -19,7 +21,9 @@ const Section = () => {
               Contact Me
             </button>
             <button className='mr-4 w-full sm:w-fit  rounded-full py-2 px-6  hover:bg-slate-400  mt-3 border-y-4 shadow-lg shadow-blue-500/50'>
-              Download CV
+              <a download='Yarin_Tag_CV.pdf' href={CV}>
+                Download CV
+              </a>
             </button>
           </div>
         </div>
@@ -28,7 +32,7 @@ const Section = () => {
             <Image
               src='/images/ai.png'
               alt='Hero Image'
-              className='rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
+              className='skew-y-6 rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
               width={200}
               height={200}
             />
