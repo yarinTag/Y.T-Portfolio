@@ -26,7 +26,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
       <time className='mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
         {duration}
       </time>
-      <h3 className='text-lg font-semibold text-blue-200 dark:text-white'>
+      <h3 className='text-lg font-semibold text-blue-200'>
         {company}
       </h3>
       <p className='italic block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>

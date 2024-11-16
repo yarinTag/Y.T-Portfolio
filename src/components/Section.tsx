@@ -30,11 +30,11 @@ const Section = () => {
         <div className='col-span-5 place-self-center mt-4 lg:mt-0'>
           <div className='w-[250px] h-[250px] relative'>
             <Image
-              src='/images/ai.png'
+              src='/images/Aime.png'
               alt='Hero Image'
               className='skew-y-6 rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
-              width={200}
-              height={200}
+              width={250}
+              height={250}
             />
           </div>
         </div>

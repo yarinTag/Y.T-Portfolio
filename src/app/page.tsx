@@ -6,6 +6,7 @@ import AboutSection from '@/components/about/About';
 import Navbar from '@/components/navbar/Navbar';
 import Section from '@/components/Section';
 import Project from '@/components/Project';
+import Chatbot from '@/components/ChatBot';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         </div>
         <AboutSection />
         <Project />
+        <Chatbot/>
       </main>
     </ThemeProvider>
   );

@@ -2,7 +2,7 @@
 import React from 'react';
 
 interface IContextProps {
-  theme: 'white' | 'black';
+  theme: 'white' | '#0D0D0D';
   toggleTheme: (value: boolean) => void;
 }
 
@@ -12,16 +12,16 @@ export const ThemeContext = React.createContext<IContextProps>({
 });
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = React.useState<'white' | 'black'>('white');
+  const [theme, setTheme] = React.useState<'white' | '#0D0D0D'>('white');
 
   const toggleTheme = (value: boolean) => {
-    setTheme(value ? 'black' : 'white');
+    setTheme(value ? '#0D0D0D' : 'white');
   };
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div
-        className={`bg-${theme} text-${theme === 'black' ? 'white' : 'black'}`}
+        className={`bg-[${theme}] text-${theme === '#0D0D0D' ? 'white' : '#0D0D0D'}`}
       >
         {children}
       </div>

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Timeline, TimelineItem } from '../TimelineItem';
 import Tab from '../tab/Tab';
 import Skill from '../Skill';

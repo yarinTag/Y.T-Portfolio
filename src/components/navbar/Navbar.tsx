@@ -49,9 +49,9 @@ const Navbar = () => {
         <div className='toggle-theme'>
           <button
             className='flex items-center px-3 py-2 text-slate-200 hover:text-white hover:border-white'
-            onClick={() => toggleTheme(theme === 'black' ? false : true)}
+            onClick={() => toggleTheme(theme === '#0D0D0D' ? false : true)}
           >
-            {theme === 'black' ? <LightBulbOff /> : <LightBulbOn />}
+            {theme === '#0D0D0D' ? <LightBulbOff /> : <LightBulbOn />}
           </button>
         </div>
         <div className='mobile-menu block md:hidden'>
