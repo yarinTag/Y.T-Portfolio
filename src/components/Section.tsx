@@ -9,7 +9,7 @@ const Section = () => {
       <div className='grid grid-cols-1 sm:grid-cols-12'>
         <div className='col-span-7 place-self-center text-center sm:text-left'>
           <h1 className='mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold'>
-            Hi 👋, I'm Yarin
+            Hi 👋, I&apos;m Yarin
           </h1>
           <AnimatedText text='Software Developer.' delay={100} />
           <p className='text-base sm:text-xl mb-6 lg:text-xl'>
