@@ -18,16 +18,12 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text, delay }) => {
         if (textRef.current.length < text.length) {
           textRef.current += text[textRef.current.length];
           setVisibleText(textRef.current);
-        } else {
-          forwardRef.current = false;
-        }
+        } else forwardRef.current = false;
       } else {
         if (textRef.current.length > 1) {
           textRef.current = textRef.current.slice(0, -1);
           setVisibleText(textRef.current);
-        } else {
-          forwardRef.current = true;
-        }
+        } else forwardRef.current = true;
       }
     };
 
@@ -40,7 +36,6 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text, delay }) => {
     <p
       style={{
         animation: 'typewrite 2s steps(30, end)',
-        // color: 'white',
         fontStyle: 'italic',
         fontWeight: 'bold',
       }}

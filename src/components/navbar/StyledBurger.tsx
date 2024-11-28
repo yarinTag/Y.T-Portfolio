@@ -14,7 +14,7 @@ const StyledBurger = ({ isOpen, toggleMenu }: Props) => {
   return (
     <div
       className={`
-        fixed top-3 right-5 z-20 flex flex-col justify-around w-8 h-8
+         z-20 flex flex-col justify-around w-8 h-8
         cursor-pointer md:hidden
       `}
       onClick={handleOpen}

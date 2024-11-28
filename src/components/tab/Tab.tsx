@@ -15,11 +15,11 @@ const Tab = ({ tabs }: TabProps) => {
 
   return (
     <div className='flex flex-col'>
-      <div className='flex justify-around'>
+      <div className='flex justify-around sm:space-between'>
         {tabs.map((tab, index) => (
           <button
             key={index}
-            className={`px-4 py-2 border-y-4 rounded-xl shadow-lg shadow-blue-500/50${
+            className={`px-3 py-2 border-y-4 rounded-xl shadow-lg shadow-blue-500/50${
               index === activeTab
                 ? ' underline'
                 : 'bg-gray-200 hover:bg-gray-400'

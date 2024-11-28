@@ -7,11 +7,13 @@ const Chatbot = () => {
     { user: boolean; text: string }[]
   >([]);
   const [input, setInput] = React.useState('');
+  const [isPending, setIsPending] = React.useState(false);
 
   const handleSendMessage = async () => {
-    if (!input.trim()) return;
+    if (!input.trim() || isPending) return;
 
     setMessages((prev) => [...prev, { user: true, text: input }]);
+    setIsPending((prev) => !prev);
 
     try {
       const response = await fetch('/api/chat', {
@@ -23,12 +25,11 @@ const Chatbot = () => {
       if (response.ok) {
         const { reply } = await response.json();
         setMessages((prev) => [...prev, { user: false, text: reply }]);
-      } else {
+      } else
         setMessages((prev) => [
           ...prev,
           { user: false, text: 'Something went wrong. Please try again.' },
         ]);
-      }
     } catch (_error) {
       setMessages((prev) => [
         ...prev,
@@ -40,6 +41,7 @@ const Chatbot = () => {
     }
 
     setInput('');
+    setIsPending((prev) => !prev);
   };
 
   return (
@@ -91,10 +93,12 @@ const Chatbot = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
+              disabled={isPending}
             />
             <button
               className='bg-blue-600 text-white p-2 rounded-r-lg hover:bg-blue-700'
               onClick={handleSendMessage}
+              disabled={isPending}
             >
               Send
             </button>

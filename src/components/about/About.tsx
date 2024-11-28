@@ -1,6 +1,6 @@
-import { Timeline, TimelineItem } from '../TimelineItem';
+import { Timeline, TimelineItem } from '../timeline/TimelineItem';
 import Tab from '../tab/Tab';
-import Skill from '../Skill';
+import Skill from '../skill/Skill';
 
 const experienceData = [
   {
@@ -115,7 +115,7 @@ const tabs = [
 
 const AboutSection = () => {
   return (
-    <section className='container my-24 mx-auto px-12 py-4' id='about'>
+    <section className='container my-4 mx-auto px-12 py-4' id='about'>
       <div className='md:order-2'></div>
       <div className='md:order-1 flex flex-col justify-center'>
         <h2 className='text-3xl font-bold mb-4'>About Me</h2>
