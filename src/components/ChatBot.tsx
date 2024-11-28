@@ -30,7 +30,7 @@ const Chatbot = () => {
           ...prev,
           { user: false, text: 'Something went wrong. Please try again.' },
         ]);
-    } catch (_error) {
+    } catch {
       setMessages((prev) => [
         ...prev,
         {

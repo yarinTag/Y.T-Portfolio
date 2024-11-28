@@ -120,10 +120,10 @@ const AboutSection = () => {
       <div className='md:order-1 flex flex-col justify-center'>
         <h2 className='text-3xl font-bold mb-4'>About Me</h2>
         <p className='text-lg mb-6'>
-          After completing 9 months of reserve duty, I'm now seeking my next
-          opportunity. With 3 years of hands-on experience in React, Node.js,
-          and cloud technologies, I’m eager to bring my technical expertise to a
-          dynamic team and drive forward-thinking projects.
+          After completing 9 months of reserve duty, I&apos;m now seeking my
+          next opportunity. With 3 years of hands-on experience in React,
+          Node.js, and cloud technologies, I&apos;m eager to bring my technical
+          expertise to a dynamic team and drive forward-thinking projects.
         </p>
       </div>
       <Tab tabs={tabs} />

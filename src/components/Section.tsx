@@ -13,8 +13,8 @@ const Section = () => {
           </h1>
           <AnimatedText text='Software Developer.' delay={100} />
           <p className='text-base sm:text-xl mb-6 lg:text-xl'>
-            I’m a . specializing in creating robust web & mobile platforms using
-            JavaScript, React, TypeScript and Node.js.
+            I&apos;m a specializing in creating robust web & mobile platforms
+            using JavaScript, React, TypeScript and Node.js.
           </p>
           <div>
             <button className='mr-4 w-full sm:w-fit  py-2 px-6 rounded-full border-y-2 font-bold hover:bg-gray-400'>
