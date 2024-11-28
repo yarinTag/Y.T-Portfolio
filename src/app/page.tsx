@@ -18,7 +18,7 @@ export default function Home() {
         </div>
         <AboutSection />
         <Project />
-        <Chatbot/>
+        <Chatbot />
       </main>
     </ThemeProvider>
   );

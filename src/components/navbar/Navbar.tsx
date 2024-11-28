@@ -7,6 +7,7 @@ import NavLink, { INProps } from './NavLink';
 import { ThemeContext } from '@/app/context';
 import LightBulbOn from '@/app/icons/LightBulbOn';
 import LightBulbOff from '@/app/icons/LightBulbOff';
+import StyledBurger from './StyledBurger';
 
 const navLinks: INProps[] = [
   {
@@ -55,21 +56,7 @@ const Navbar = () => {
           </button>
         </div>
         <div className='mobile-menu block md:hidden'>
-          {isOpen ? (
-            <button
-              className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
-              onClick={toggleMenu}
-            >
-              X
-            </button>
-          ) : (
-            <button
-              className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
-              onClick={toggleMenu}
-            >
-              PO
-            </button>
-          )}
+          <StyledBurger isOpen={isOpen} toggleMenu={toggleMenu} />
         </div>
         <div className='menu hidden md:block md:w-auto' id='navbar'>
           <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8'>

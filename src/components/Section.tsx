@@ -18,7 +18,7 @@ const Section = () => {
           </p>
           <div>
             <button className='mr-4 w-full sm:w-fit  py-2 px-6 rounded-full border-y-2 font-bold hover:bg-gray-400'>
-              Contact Me
+              <a href='mailto:yarin.tagouri@gmail.com'>Contact Me</a>
             </button>
             <button className='mr-4 w-full sm:w-fit  rounded-full py-2 px-6  hover:bg-slate-400  mt-3 border-y-4 shadow-lg shadow-blue-500/50'>
               <a download='Yarin_Tag_CV.pdf' href={CV}>
@@ -32,9 +32,10 @@ const Section = () => {
             <Image
               src='/images/Aime.png'
               alt='Hero Image'
-              className='skew-y-6 rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
+              className='animate-refine-slide skew-y-6 rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
               width={250}
               height={250}
+              priority
             />
           </div>
         </div>
