@@ -125,4 +125,5 @@ To run this project locally, follow these steps:
 
 ## Screenshots
 
-_Coming Soon: Visual previews of the portfolio design and features._
+[![Watch the video]]
+(https://raw.githubusercontent.com/yarinTag/Y.T-Portfolio/yarinTag-video-1/public/images/Y.T-video - COMPRESS.mp4)
