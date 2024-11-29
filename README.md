@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Y.T Portfolio
 
-## Getting Started
+This portfolio template is perfect for showcasing your professional background and capabilities. It's more than just a static website—it's an interactive experience built with modern technologies and customizable features, making it easy for you to adapt and make it your own.
 
-First, run the development server:
+### Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Interactive Bot Assistant:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  - Integrated with Gemini AI to answer questions about me and my professional journey.
+  - A seamless way to engage with my portfolio and explore more about my skills and projects.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Modern Tech Stack:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  - **React** and **Next.js** for building a fast and interactive user interface.
+  - **TypeScript** for type safety and maintainability.
+  - **Tailwind CSS** for crafting a clean and responsive design.
 
-## Learn More
+- **Performance Optimized:**
 
-To learn more about Next.js, take a look at the following resources:
+  - Built with Next.js’s server-side rendering (SSR) and static site generation (SSG) capabilities for optimal performance.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Responsive Design:**
+  - Mobile-first approach ensures a great experience on all devices.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+### Folder Overview
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **public/images:** Contains all images used in the app, including my CV.
+- **src/app/context:** Manages the theme state and context for the app.
+- **src/app/icons:** Includes two bulb icons for theme control.
+- **src/app/globals.css:** Tailwind CSS for global styling.
+- **src/app/layout.tsx:** Defines the root layout of the application.
+- **src/app/page.tsx:** Wraps the app with `ThemeProvider`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Components Directory
+
+- **components/section:**
+
+  - `AboutSection.tsx`: Manages the About section of the portfolio.
+  - `Section.tsx`: A reusable section component.
+
+- **components/navbar:**
+
+  - `MobileMenu.tsx`: Handles mobile navigation menu.
+  - `Navbar.tsx`: Main navigation bar.
+  - `NavLink.tsx`: Navigation link component.
+  - `StyledBurger.tsx`: Styled hamburger menu for mobile navigation.
+
+- **components/skill:**
+
+  - `Skill.tsx`: Displays skills with an interactive design.
+
+- **components/tab:**
+
+  - `Tab.tsx`: Tab component for organizing content.
+
+- **components/timeline:**
+
+  - `TimeLineItem.tsx`: Timeline item component for showcasing milestones.
+
+- **components/project:**
+
+  - `Project.tsx`: Manages project showcase.
+
+- **components/shared:**
+  - `AnimatedText.tsx`: Animates text for dynamic effects.
+  - `ChatBot.tsx`: Integrates the chatbot feature.
+
+### API
+
+- **pages/api/chat.ts:**
+  - Integrates with Gemini AI to power the assistant bot, providing responses based on the data shared about me.
+
+## Installation and Setup
+
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yarinTag/Y.T-Portfolio.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd Y.T-Portfolio
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+## Technologies Used
+
+- **React**: For building the user interface.
+- **Next.js**: For server-side rendering and static site generation.
+- **TypeScript**: For enhancing code quality and maintainability.
+- **Tailwind CSS**: For creating a responsive and modern design.
+- **Gemini AI Integration**: Enhances the bot assistant functionality.
+
+## How It Works
+
+- **Bot Assistant:**
+
+  - The bot leverages Gemini AI to provide answers about my background, skills, and projects. Simply ask it a question to learn more about me.
+
+- **Projects Section:**
+
+  - Explore various projects I’ve worked on, presented in an engaging and visually appealing layout.
+
+- **Responsive Design:**
+  - The site adapts beautifully across devices, ensuring accessibility and a seamless experience for all users.
+
+## Screenshots
+
+_Coming Soon: Visual previews of the portfolio design and features._
+
+## Contributing
+
+Contributions are welcome! If you have ideas or improvements, feel free to fork the repository and submit a pull request. Let’s collaborate to make this portfolio even better.
