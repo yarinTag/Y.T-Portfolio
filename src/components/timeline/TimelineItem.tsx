@@ -23,20 +23,17 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
   return (
     <li className='mb-10 ms-4'>
       <div className='absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700'></div>
-      <time className='mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+      <time className='mb-1 text-sm font-normal leading-none text-gray-600 dark:text-gray-400'>
         {duration}
       </time>
-      <h3 className='text-lg font-semibold text-blue-200'>
-        {company}
-      </h3>
-      <p className='italic block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+      <h3 className='text-lg font-semibold text-blue-400'>{company}</h3>
+      <p className='italic block mb-2 text-sm font-normal leading-none text-gray-600 dark:text-gray-400'>
         {position}
       </p>
-      <p className='block mb-2 text-xs font-normal  text-gray-400 dark:text-gray-500'>
+      <p className='block mb-2 text-xs font-normal  text-gray-600 dark:text-gray-400'>
         {location}
       </p>
-
-      <div className='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+      <div className='mb-4 text-base font-normal text-gray-600 dark:text-gray-400'>
         <ul>
           {description?.map((item, index) => (
             <li className='mb-10 ms-4' key={index}>

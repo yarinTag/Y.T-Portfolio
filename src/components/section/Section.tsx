@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import AnimatedText from './AnimatedText';
+import AnimatedText from '../shared/AnimatedText';
 
 const Section = () => {
   const CV = '/images/YT-Resume.pdf';
@@ -16,11 +16,17 @@ const Section = () => {
             I&apos;m a specializing in creating robust web & mobile platforms
             using JavaScript, React, TypeScript and Node.js.
           </p>
-          <div>
-            <button className='mr-4 w-full sm:w-fit  py-2 px-6 rounded-full border-y-2 font-bold hover:bg-gray-400'>
+          <div className='flex flex-col sm:flex-row items-center sm:space-x-2 space-y-4 sm:space-y-0'>
+            <button
+              className='mr-2 w-full sm:w-fit  py-2 px-8 rounded-full border-y-2 font-bold hover:bg-gray-400'
+              aria-label='Contact Me'
+            >
               <a href='mailto:yarin.tagouri@gmail.com'>Contact Me</a>
             </button>
-            <button className='mr-4 w-full sm:w-fit  rounded-full py-2 px-6  hover:bg-slate-400  mt-3 border-y-4 shadow-lg shadow-blue-500/50'>
+            <button
+              className='mr-2 w-full sm:w-fit  rounded-full py-2 px-8 hover:bg-slate-400 border-y-4 shadow-lg shadow-blue-500/50'
+              aria-label='Download CV'
+            >
               <a download='Yarin_Tag_CV.pdf' href={CV}>
                 Download CV
               </a>

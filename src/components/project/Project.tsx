@@ -56,100 +56,100 @@ const Project = () => {
   };
 
   return (
-    <div className="container my-18 mx-auto px-12 py-4" id="projects">
-      <div className="flex flex-col xl:flex-row xl:gap-[32px]">
-        <div className="w-full xl:w-[50%] flex flex-col xl:justify-between order-2 xl:order-none">
-          <div className="flex flex-col gap-2">
+    <div className='container my-18 mx-auto px-12 py-4' id='projects'>
+      <div className='flex flex-col xl:flex-row xl:gap-[32px]'>
+        <div className='w-full xl:w-[50%] flex flex-col xl:justify-between order-2 xl:order-none'>
+          <div className='flex flex-col gap-2'>
             <div>
-              <div className="text-8xl font-bold">{project.id}</div>
+              <div className='text-8xl font-bold'>{project.id}</div>
             </div>
-            <h2 className="text-2xl font-bold transition-all duration-500 capitalize">
+            <h2 className='text-2xl font-bold transition-all duration-500 capitalize'>
               {project.title}
             </h2>
-            <p className="text-gray-400 dark:text-gray-500">
+            <p className='text-gray-400 dark:text-gray-500'>
               {project.description}
             </p>
-            <ul className="flex gap-2 flex-wrap">
+            <ul className='flex gap-2 flex-wrap'>
               {project.stack.map((stack, index) => (
                 <li key={stack}>
                   {stack} {index !== project.stack.length - 1 && ','}
                 </li>
               ))}
             </ul>
-            <div className="border-y"></div>
-            <div className="flex gap-4">
+            <div className='border-y'></div>
+            <div className='flex gap-4'>
               <Link href={project.github}>Github</Link>
               <Link href={project.github}>Live</Link>
             </div>
           </div>
         </div>
-        <div className="w-full xl:w-[50%]">
+        <div className='w-full xl:w-[50%]'>
           <div
-            id="default-carousel"
-            className="relative w-full"
-            data-carousel="static"
+            id='default-carousel'
+            className='relative w-full'
+            data-carousel='static'
           >
-            <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-              <div className="duration-700 ease-in-out" data-carousel-item>
+            <div className='relative h-56 overflow-hidden rounded-lg md:h-96 aspect-h-9'>
+              <div className='duration-700 ease-in-out' data-carousel-item>
                 <Image
                   src={project.image}
-                  layout="fill"
-                  objectFit="fill"
-                  className="absolute block w-full"
+                  layout='fill'
+                  objectFit='contain'
+                  className='absolute'
                   alt={project.title}
                 />
               </div>
             </div>
             <button
-              type="button"
-              className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              type='button'
+              className='absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none'
               data-carousel-prev
               disabled={projectIndex === 0}
               onClick={() => handleSlider(projectIndex - 1)}
             >
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <span className='inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none'>
                 <svg
-                  className="w-4 h-4 dark:text-gray-800 rtl:rotate-180"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 6 10"
+                  className='w-4 h-4 dark:text-gray-800 rtl:rotate-180'
+                  aria-hidden='true'
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 6 10'
                 >
                   <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 1 1 5l4 4"
+                    stroke='currentColor'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
+                    d='M5 1 1 5l4 4'
                   />
                 </svg>
-                <span className="sr-only">Previous</span>
+                <span className='sr-only'>Previous</span>
               </span>
             </button>
             <button
-              type="button"
-              className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              type='button'
+              className='absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none'
               data-carousel-next
               disabled={projectIndex === projects.length - 1}
               onClick={() => handleSlider(projectIndex + 1)}
             >
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <span className='inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none'>
                 <svg
-                  className="w-4 h-4 dark:text-gray-800 rtl:rotate-180"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 6 10"
+                  className='w-4 h-4 dark:text-gray-800 rtl:rotate-180'
+                  aria-hidden='true'
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 6 10'
                 >
                   <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 9 4-4-4-4"
+                    stroke='currentColor'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
+                    d='m1 9 4-4-4-4'
                   />
                 </svg>
-                <span className="sr-only">Next</span>
+                <span className='sr-only'>Next</span>
               </span>
             </button>
           </div>

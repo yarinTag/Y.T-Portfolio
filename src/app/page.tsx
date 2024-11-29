@@ -2,11 +2,11 @@
 import React from 'react';
 
 import { ThemeProvider } from './context';
-import AboutSection from '@/components/about/About';
+import AboutSection from '@/components/section/AboutSection';
 import Navbar from '@/components/navbar/Navbar';
-import Section from '@/components/Section';
-import Project from '@/components/Project';
-import Chatbot from '@/components/ChatBot';
+import Project from '@/components/project/Project';
+import Chatbot from '@/components/shared/ChatBot';
+import Section from '@/components/section/Section';
 
 export default function Home() {
   return (

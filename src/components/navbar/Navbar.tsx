@@ -51,6 +51,7 @@ const Navbar = () => {
           <button
             className='flex items-center px-3 py-2 text-slate-200 hover:text-white hover:border-white'
             onClick={() => toggleTheme(theme === '#0D0D0D' ? false : true)}
+            aria-label='theme_btn'
           >
             {theme === '#0D0D0D' ? <LightBulbOff /> : <LightBulbOn />}
           </button>
