@@ -126,7 +126,3 @@ To run this project locally, follow these steps:
 ## Screenshots
 
 _Coming Soon: Visual previews of the portfolio design and features._
-
-## Contributing
-
-Contributions are welcome! If you have ideas or improvements, feel free to fork the repository and submit a pull request. Let’s collaborate to make this portfolio even better.
