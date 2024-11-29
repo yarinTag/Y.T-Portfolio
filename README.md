@@ -126,4 +126,4 @@ To run this project locally, follow these steps:
 ## Screenshots
 
 [![Watch the video]]
-(https://raw.githubusercontent.com/yarinTag/Y.T-Portfolio/yarinTag-video-1/public/images/Y.T-video - COMPRESS.mp4)
+(https://raw.githubusercontent.com/yarinTag/Y.T-Portfolio/yarinTag-video-1/public/images/Y.T-video-COMPRESS.mp4)
