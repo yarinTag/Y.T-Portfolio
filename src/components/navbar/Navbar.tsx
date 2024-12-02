@@ -12,7 +12,7 @@ import StyledBurger from './StyledBurger';
 const navLinks: INProps[] = [
   {
     title: 'Home',
-    href: '/',
+    href: '/#home',
   },
   {
     title: 'About',
