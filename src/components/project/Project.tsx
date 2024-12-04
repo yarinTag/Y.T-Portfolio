@@ -77,9 +77,21 @@ const Project = () => {
               ))}
             </ul>
             <div className='border-y'></div>
-            <div className='flex gap-4'>
-              <Link href={project.github}>Github</Link>
-              <Link href={project.github}>Live</Link>
+            <div className='flex gap-2'>
+              <Link
+                className='text-blue-400 font-semibold hover:bg-slate-400 px-4 rounded-full border-y-4 shadow-lg shadow-blue-500/50'
+                href={project.github}
+                target='_blank'
+              >
+                Github
+              </Link>
+              <Link
+                className='font-semibold hover:bg-slate-400 px-4 rounded-full border-y-4 shadow-lg shadow-blue-500/50'
+                href={project.github}
+                target='_blank'
+              >
+                Live
+              </Link>
             </div>
           </div>
         </div>
